@@ -1,0 +1,65 @@
+
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+<title>Generator</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="app.css">
+<style>
+div#total { width: 840px; height: 400px; }
+div#canvas { width: 600px; height: 400px; }
+div#panel { left: 600px; width: 240px; height: 400px; } 
+.pos1 { left: 10px; }
+button { width: 220px; }
+input[type="range"] { width: 220px; }
+</style>
+<script src="generator.js"></script>
+<script src="generator_en.js"></script>
+<script src="page_phen.js"></script>
+<meta name="description" content="HTML5 app: Generator">
+<meta name="author" content="Walter Fendt">
+<meta name="keywords" content="app, physics, electricity, electrodynamics, generator, induction">
+</head>
+
+<body>
+
+<h1>Generator</h1>
+<h2>Instructions.......</h2>
+
+<p>This HTML5 app simulates a <em class="Begriff">generator</em> which is reduced to the most important parts for clarity. Instead of an 
+    armature with many windings and iron nucleus there is only a single rectangular conductor loop; the axis the loop rotates on is omitted.</p>
+    
+    <p>The radio buttons in the top right corner allow you to choose an AC generator (without commutator), or a DC generator (with commutator). 
+    You can change the direction of rotation by using the corresponding button. The sliding control makes it possible to vary the rotational speed. 
+    You can stop and continue the simulation with the button <span class="nobr">&quot;Pause / Resume&quot;.</span>
+    This, however, does <em>not</em> mean a real 
+    stop of the movement, for in this case the induced voltage would be reduced to zero.</p>
+    
+    <p>Two black arrows mark the momentary direction of movement. You can recognize the magnetic field lines (directed from the red painted 
+    north pole to the green painted south pole) by the blue color. The red arrows represent the direction of the induced current
+    (conventional direction of current).</p>
+
+<div id="total">
+  <div id="canvas"><canvas id="cv" width=600 height=400>This browser doesn't support HTML5 canvas!</canvas></div>
+  <div id="panel">
+    <div style="top: 20px;"><input type="radio" id="rb1a" name="bg" value=""><label for="rb1" id="rb1b"></label></div>
+    <div style="top: 50px;"><input type="radio" id="rb2a" name="bg" value=""><label for="rb2" id="rb2b"></label></div>
+    <div style="top: 90px;"><button id="bu1" style="background-color: #ff6060;"></button></div>
+    <div style="top: 140px;"><input type="range" id="sl" min=0 max=20 step=1 value=10></div>
+    <div style="top: 170px;"><span id="op" class="pos1"></span></div>
+    <div style="top: 200px;"><button id="bu2" style="background-color: hsl(39, 100%, 50%);"></button></div>
+    <div style="top: 250px;"><input type="checkbox" id="cb1a" name="cb1a" value=""><label for="cb1a" id="cb1b" style="color: #000000;"></label></div>
+    <div style="top: 280px;"><input type="checkbox" id="cb2a" name="cb2a" value=""><label for="cb2a" id="cb2b" style="color: #33ff00;"></label></div>
+    <div style="top: 310px;"><input type="checkbox" id="cb3a" name="cb3a" value=""><label for="cb3a" id="cb3b" style="color: #ff0000;"></label></div>
+    <div style="top: 360px;"><span class="pos1" id="author"></span></div>
+    <div style="top: 380px;"><span class="pos1" id="translator"></span></div>
+  </div>
+</div>
+
+<script>endPage("generator",8,5,1998,22,12,2015);</script>
+
+
+</body>
+</html>
